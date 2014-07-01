@@ -1,3 +1,51 @@
 // Place all the styles related to the People controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+img {
+
+  border-style: solid;
+  border-color: black;
+  border-width: 3px;
+  border-radius: 20px;
+}
+
+//PEOPLE LISTING
+#peopleh1{
+  text-align:center;
+
+}
+th{
+  color:#333;
+}
+
+tr, td{
+  padding:50px;
+  color:#000;
+
+}
+
+tr{
+  border-bottom: 5px;
+  border-bottom-color: black;
+  border-bottom-width: 3px;
+}
+
+//SHOW PERSON
+.show img {
+
+
+    height: 50%;
+    width: 50%;
+  }
+.show {
+
+    text-align: center;
+
+}
+
+.show p{
+ color:white;
+  font-size:16px;
+}

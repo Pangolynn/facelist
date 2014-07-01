@@ -1,3 +1,5 @@
+<div class ="show">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -12,13 +14,15 @@
 
 <p>
   <strong>Phone:</strong>
-  <%= @person.phone %>
+  <%= @person.phone.insert(3, '-').insert(7, '-') %>
 </p>
 
 <p>
   <strong>Face:</strong>
+  <br/>
   <%= image_tag @person.photo.url %>
 </p>
 
 <%= link_to 'Edit', edit_person_path(@person) %> |
 <%= link_to 'Back', people_path %>
+</div>
