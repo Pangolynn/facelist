@@ -27,6 +27,9 @@ Facelist::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  #for devise
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   #Where to find imageMagick
   Paperclip.options[:command_path] = "/usr/local/bin/"
 end

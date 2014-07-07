@@ -33,6 +33,13 @@ group :doc do
 end
 
 gem "paperclip", "~> 4.1"
+
+#gem 'rails-api'
+
+gem 'activeadmin', github: 'gregbell/active_admin'
+
+
+gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

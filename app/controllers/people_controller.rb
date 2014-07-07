@@ -1,10 +1,13 @@
+# module Api
+#   module V1
 class PeopleController < ApplicationController
-  before_action :set_person, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :set_person, only: [:show, :edit, :update, :destroy]
 
   # GET /people
   # GET /people.json
   def index
     @people = Person.all.order(:name)
+    # render json: {message: 'Resource not found'}, status: 404
   end
 
   # GET /people/1
@@ -12,6 +15,7 @@ class PeopleController < ApplicationController
   def show
 
   end
+
 
   # GET /people/new
   def new
@@ -61,6 +65,7 @@ class PeopleController < ApplicationController
       format.html { redirect_to people_url }
       format.json { head :no_content }
     end
+
   end
 
   private
@@ -74,3 +79,5 @@ class PeopleController < ApplicationController
       params.require(:person).permit(:name, :email, :phone, :photo)
     end
 end
+  # end
+  # end

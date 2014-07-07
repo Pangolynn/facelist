@@ -1,5 +1,9 @@
 Facelist::Application.routes.draw do
-  resources :people
+
+  devise_for :users
+  # namespace :api, defaults: {format: 'json'} do
+  #   namespace :v1 do
+resources :people
 
   get "home/index"
   # The priority is based upon order of creation: first created -> highest priority.
@@ -57,3 +61,5 @@ Facelist::Application.routes.draw do
   #     resources :products
   #   end
 end
+
+
